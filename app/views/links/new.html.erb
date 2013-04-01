@@ -1,0 +1,24 @@
+<div class="six columns offset-by-five">
+<h2 class="header">Submit a Link</h2>
+
+<%= form_for(@link) do |f| %>
+	<div><%= f.label :url %><br />
+	<%= f.text_field :url, :autofocus => true %></div>
+
+	<div><%= f.label :title %><br />
+	<%= f.text_field :title %></div>
+
+	<div><%= f.label :comment %><br />
+	<%= f.text_area :title, rows: "4" %></div>
+
+	<div>
+	<%= f.hidden_field :user_id, value: current_user.id %>
+	</div>	
+
+
+	<br />
+	<div><%= f.submit "Submit", class: "button" %></div>
+<% end %>
+
+
+</div>

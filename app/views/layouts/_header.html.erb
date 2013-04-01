@@ -8,18 +8,20 @@
 	</div>
 	<div class="sub-nav eight columns omega">
 		<div class="menu-wrapper">
-		<ul class="menu">
-			<% if user_signed_in? %>
-			<li><i class="icon-minus-sign"></i><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-			<li><i class="icon-cog"></i><%= link_to 'Settings', edit_user_registration_path %></li>
-			<% else %>
-			<li><i class="icon-ok-sign"></i><%= link_to 'Login', new_user_session_path %></li>
-			<li><i class="icon-edit"></i><%= link_to 'Signup', new_user_registration_path %></li>
-			<% end %>
+			<ul class="menu">
 
-		</ul>
+				<% if user_signed_in? %>
+				<li><i class="icon-minus-sign"></i><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+				<li><i class="icon-cog"></i><%= link_to 'Settings', edit_user_registration_path %></li>
+				<% else %>
+				<li><i class="icon-ok-sign"></i><%= link_to 'Login', new_user_session_path %></li>
+				<li><i class="icon-edit"></i><%= link_to 'Signup', new_user_registration_path %></li>
+				<% end %>
+
+				<li><i class="icon-minus-sign"></i><%= link_to 'Submit', new_link_path %></li>
+			</ul>
+		</div>
 	</div>
 </div>
-</div>
-</div>
+
 

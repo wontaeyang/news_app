@@ -9,6 +9,10 @@
 	height: $nav;
 	margin: 0;
 	padding: 0;
+	a{
+		color: $archivedWhite !important;
+	}
+	
 }
 
 .sub-nav{
@@ -16,6 +20,9 @@
 	height: $nav;
 	margin: 0;
 	margin-top: -5px;
+	li a{
+		color: $archivedWhite !important;
+	}
 }
 
 .logo{
