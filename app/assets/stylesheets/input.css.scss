@@ -1,0 +1,22 @@
+input, textarea, select, .uneditable-input {
+	border: 5px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	
+}
+
+input {
+	height: auto !important;
+
+}
+
+.checkbox-inline{
+	input, textarea, select, .uneditable-input {
+		width: 30px !important;
+		display: inline;
+	}
+}
+
+.remember-me{
+	padding-bottom: 20px;
+}

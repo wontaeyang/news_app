@@ -4,18 +4,40 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
+	font-family: "Helvetica Neue", Helvetica;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
+	font-family: "Helvetica Neue", Helvetica;
+	font-weight: bold;
+	color: $archivedBlack;
+}
+
+a, a:visited { 
+	color: $archivedWhite; 
+	text-decoration: none; 
+	outline: 0; 
+	// -webkit-transition: color 0.1s ease-out;
+	// -moz-transition: color 0.1s ease-out;
+	// -o-transition: color 0.1s ease-out;
+	// transition: color 0.1s ease-out;
+}
+a:hover, a:focus { 
+	// color: $archivedRed; 
+}
+p a, p a:visited { 
+	line-height: inherit; 
+}
+
+small{
+	font-size: .8em;
 	font-weight: bold;
 }
 
-.title{
-	margin-left: 20px;
-	margin-top: 12px;
-	color: white;
-	font-size: 1.5em;
-	font-weight: bold;
-	vertical-align: middle;
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	margin-bottom: 30px;
 }

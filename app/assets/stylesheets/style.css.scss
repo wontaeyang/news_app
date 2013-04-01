@@ -1,15 +1,38 @@
 $archivedBlack: #222222;
+$archivedWhite: #fff;
+$archivedRed: #d45354;
+$archivedBlue: #2185c8;
+$archivedGray: #3e454c;
+$nav: 46px;
 
 @import "base";
 @import "layout";
-@import "skeleton";
 @import "font-awesome";
 @import "font";
 @import "nav";
+@import "input";
+@import "footer";
+@import "error";
+@import "skeleton";
+@import "helper";
+
+
+
 
 *{
-	margin: 0;
+	// margin: 0;
 }
+
+html, body{
+	background: url(/assets/diagonal.png);
+	background-size: 100px 100px;
+	height: 100%;
+}
+
+i {
+	margin: 0 7px 0 7px;
+}
+
 
 
 

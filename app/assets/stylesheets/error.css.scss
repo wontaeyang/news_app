@@ -1,0 +1,23 @@
+#error_explanation {
+	h2{
+		// font-size: 1.2em;
+		// font-weight: bold;
+		// color: $archivedRed;
+		display: none;
+	}
+	ul{
+		li{
+			margin-left: 20px;
+			color: $archivedRed;
+			font-weight: bold;
+			list-style-type: circle;
+		}
+	}
+}
+
+.flash{
+	color: $archivedRed;
+	font-weight: bold;
+	margin-right: 15px;
+	float: right;
+}
