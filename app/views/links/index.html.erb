@@ -1,11 +1,17 @@
 <% @links.each_with_index do |p, index| %>
 
+
 <p>
 	<%= index+1 %>.<%= link_to p.title.upcase, p.url %> 
 </p>
+
+
 <p>
 	<%= link_to User.find(p.user_id).email, p.url %> 
 </p>
 
 
+
 <% end %>
+
+<%= will_paginate @posts, :page_links => false %>

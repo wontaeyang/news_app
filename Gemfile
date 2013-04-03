@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'skeleton-rails'
 gem 'devise'
+gem 'will_paginate', '~> 3.0'
 
 
 group :assets do
