@@ -27,6 +27,7 @@ class LinksController < ApplicationController
 
 	def index
 		@links = Link.order('created_at DESC').paginate(:page => params[:page], :per_page => 2)
+		@offset = (@links.per_page - 1) * (@links.offset)
 
 		if @links.empty?
 			flash[:error] = "Threre are no links to view, create new link to proceed"
