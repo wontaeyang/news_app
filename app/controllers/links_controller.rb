@@ -26,7 +26,7 @@ class LinksController < ApplicationController
 	end
 
 	def index
-		@links = Link.order('created_at DESC').paginate(:page => params[:page], :per_page => 2)
+		@links = Link.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
 		@offset = (@links.per_page - 1) * (@links.offset)
 
 		if @links.empty?

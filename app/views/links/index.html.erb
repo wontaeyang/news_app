@@ -1,17 +1,41 @@
-<% @links.each_with_index do |p, index| %>
+<div class="twelve columns offset-by-two">
+	<table class="links-table">
+		<% @links.each_with_index do |p, index| %>
+		<tbody>
+
+			<tr>
+				<td class="links-numbering">
+					<%= index + @offset + 1 %>.
+				</td>
+				<td>
+					<span class="links-title">
+						<%= link_to p.title.upcase, p.url %>
+					</span>
+
+					<span class="links-divider">
+						| 
+					</span>
+
+					<span class="links-domain">
+						<%= link_to URI.parse(p.url).host.gsub(/\Awww\./, "") , p.url %>
+					</span>
+
+				</td>
+
+			</tr>
+			<tr>
+				<td>
+
+				</td>
+				<td class="links-user">
+					<%= link_to User.find(p.user_id).name.capitalize, URI.parse(p.url).host %> 
+				</td>
+			</tr>
+
+			<% end %>
+		</tbody>
+	</table>
 
 
-<p>
-	<%= index + @offset + 1 %>.<%= link_to p.title.upcase, p.url %> 
-</p>
 
-
-<p>
-	<%= link_to User.find(p.user_id).email, p.url %> 
-</p>
-
-
-
-<% end %>
-
-<%= will_paginate @posts, :page_links => false %>
+	<%= will_paginate @posts, :page_links => false %>

@@ -11,12 +11,12 @@
 </head>
 
 <body>
-	<%= render 'layouts/header' %>
-	<div class="container custom-body">
+	<div class="container">
+		<%= render 'layouts/header' %>
 			<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "flash") %>
 			<% end %>
-		<div class="sixteen columns top-offset">
+		<div class="sixteen columns custom-body">
 			
 
 			<%= yield %>

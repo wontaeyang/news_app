@@ -10,7 +10,7 @@
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
         // custom mobile css
-        .menu-wrapper { display: table; padding-bottom: 10px; margin-left: auto; margin-right: auto;}
+        
         .title-wrapper { width: 200px; margin-left: auto; margin-right: auto;}
         .logo{ float: middle;}
         .title{ float: left;}
@@ -23,6 +23,9 @@
         .custom-body { padding-top: 10px;}
         .footer small{ padding-left: 0;}
         i { display: none !important;}
+        .links-table{ width: 85%; margin-left: auto; margin-right: auto;}
+        .links-divider{ display: none !important;}
+        .links-domain{ display: none !important;}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
