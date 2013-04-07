@@ -18,12 +18,15 @@ class LinksController < ApplicationController
 
 
 	def show
-
+		@link = Link.find(params[:id])
+		@comment = Comment.new
 	end
+
 
 	def edit
 		@link = Link.find(params[:id])
 	end
+
 
 	def index
 		@links = Link.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)

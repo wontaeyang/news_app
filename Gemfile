@@ -6,6 +6,7 @@ gem 'skeleton-rails'
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'faker'
+gem 'jquery-rails'
 
 
 group :assets do
@@ -15,5 +16,8 @@ group :assets do
   gem "font-awesome-sass-rails"
 end
 
-gem 'jquery-rails'
+group :production do
+	gem 'pg'
+end
+
 

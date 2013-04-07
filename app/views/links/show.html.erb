@@ -1,0 +1,41 @@
+<div class="twelve columns offset-by-two">
+
+	<span class="links-title show-link">
+		<%= link_to @link.title.upcase, @link.url %>
+	</span>
+
+	<span class="links-divider show-link">
+		| 
+	</span>
+
+	<span class="links-domain show-link">
+		<%= link_to URI.parse(@link.url).host.gsub(/\Awww\./, "") , @link.url %>
+	</span>
+	<div class="">
+		<%= @link.created_at %>
+		<%= User.find(@link.user_id).name.capitalize %>
+	</div>
+
+	<div class="link-comment">
+		<%= @link.title %>
+		<%= @link.comment %>
+	</div>
+
+
+	<%= form_for(@comment) do |f| %>
+	<%= render 'shared/comment_error_messages' %>
+
+	<%= f.text_area :message, rows: "4", placeholder: "Add comment" %>
+
+	<%= f.hidden_field :link_id, :value => @link.id %>
+
+	<div><%= f.submit "Submit", class: "button" %></div>
+	<% end %>
+
+	<div>
+		<% @link.comments.each do |comment| %>
+		<p><%= comment.message %></p>
+		<% end %>
+	</div>
+
+</div>

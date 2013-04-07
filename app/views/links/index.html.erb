@@ -28,7 +28,13 @@
 
 				</td>
 				<td class="links-user">
-					<%= link_to User.find(p.user_id).name.capitalize, '#' %> 
+					<span class="">
+						<%= link_to User.find(p.user_id).name, '#' %>
+					</span> 
+
+					<span class="">
+						<%= link_to "comments", p %>
+					</span> 
 				</td>
 			</tr>
 
@@ -37,6 +43,6 @@
 	</table>
 
 
-<div class="paginate">
-	<%= will_paginate @posts, page_links: false, next_label: "More", previous_label: ""  %>
-</div>
+	<div class="paginate">
+		<%= will_paginate @posts, page_links: false, next_label: "More", previous_label: ""  %>
+	</div>

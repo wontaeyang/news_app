@@ -1,6 +1,7 @@
 NewsApp::Application.routes.draw do
   devise_for :users
   resources :links
+  resources :comments
 
   root to: 'links#index'
 

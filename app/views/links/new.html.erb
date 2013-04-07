@@ -2,7 +2,7 @@
 <h4 class="header">Submit a Link</h4>
 
 <%= form_for(@link) do |f| %>
-	<%= render 'shared/error_messages' %>
+	<%= render 'shared/links_error_messages' %>
 	
 	<%= f.text_field :url, :autofocus => true, placeholder: "URL - Include http://" %>
 
@@ -10,7 +10,7 @@
 	<%= f.text_field :title, placeholder: "Title" %>
 
 	
-	<%= f.text_area :title, rows: "4", placeholder: "Comment" %>
+	<%= f.text_area :comment, rows: "4", placeholder: "Comment" %>
 
 	<div>
 	<%= f.hidden_field :user_id, value: current_user.id %>
