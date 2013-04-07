@@ -28,7 +28,7 @@
 
 				</td>
 				<td class="links-user">
-					<%= link_to User.find(p.user_id).name.capitalize, URI.parse(p.url).host %> 
+					<%= link_to User.find(p.user_id).name.capitalize, '#' %> 
 				</td>
 			</tr>
 
@@ -37,5 +37,6 @@
 	</table>
 
 
-
-	<%= will_paginate @posts, :page_links => false %>
+<div class="paginate">
+	<%= will_paginate @posts, page_links: false, next_label: "More", previous_label: ""  %>
+</div>

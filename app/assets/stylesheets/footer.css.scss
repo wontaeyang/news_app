@@ -1,11 +1,12 @@
 .footer{
 	height: 25px;
 	background-color: white;
-	text-align: center;
+	margin: 30px 0 20px 0px !important;
 	
 	// padding-bottom: 20px;
 	// border-top: 4px solid $archivedBlack;
 	small{
-		padding-left: 10px;
+		color: $archivedGray;
+		margin-left: 10px;
 	}
 }

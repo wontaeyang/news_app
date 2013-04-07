@@ -8,12 +8,16 @@
 
 .custom-body{
 	background-color: $archivedWhite;
-	padding: 40px 0 60px 0;
+	padding: 40px 0 0px 0;
+	overflow: hidden;
+	
 }
 
 .container{
+	background-color: $archivedWhite;
 	padding-left: 20px;
 	padding-right: 20px;
+	// background-color: $archivedWhite;
 }
 
 .top-offset{

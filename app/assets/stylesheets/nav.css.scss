@@ -1,13 +1,11 @@
 .nav-container{
 	background-color: white;
-	height: auto;
-	margin-top: 20px  !important;
-	padding-top: 20px  !important;
+	overflow: hidden;
+	margin-top: 20px;
 	// box-shadow: 1px 1px 10px #888888;
 }
 
 .nav{
-	background-color: white;
 	width: auto;
 	height: $nav;
 	margin: 20px 0 0 0;
@@ -19,13 +17,10 @@
 }
 
 .sub-nav{
-	background-color: white;
 	width: auto;
-	height: $nav;
-	margin: 0;
-	margin-top: -5px;
+	height: auto;
 	li a{
-		color: $archivedBlack !important;
+		color: #999;
 	}
 }
 
@@ -37,16 +32,16 @@
 	background-size: auto 100%;
 	background-position: center;
 
-	margin-left: 20px;
+	margin-left: 0px;
 	margin-top: 12px;
 	margin-right: 10px;
 
 	-webkit-animation-name: rotate; 
-	-webkit-animation-duration: 3s; 
+	-webkit-animation-duration: 4s; 
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 	-moz-animation-name: rotate; 
-	-moz-animation-duration: 3s; 
+	-moz-animation-duration: 4s; 
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: linear;
 }
@@ -64,17 +59,17 @@
 
 .title-wrapper{
 	width: 170px;
-	margin-left: auto;
-	margin-right: auto;
+	// margin-left: auto;
+	// margin-right: auto;
 }
 
 .menu-wrapper { 
-	display: table;
-	margin: 0 auto;
+	
+	// margin-left: 12px;
+	
 }
 
 .title{
-	margin-left: 3px;
 	margin-top: 12px;
 	color: $archivedBlack;
 	font-size: 1.5em;
@@ -83,14 +78,14 @@
 }
 
 .menu{
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-right: 0px;
 	li{
 		margin-right: 20px;
 		font-size: 1em;
 		// font-weight: bold;
-		color: $archivedBlack;
+		color: $archivedGray;
 		// display: inline;
-		float: right;
+		float: left;
 	}
 }

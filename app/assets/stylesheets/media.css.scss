@@ -11,7 +11,9 @@
 @media only screen and (max-width: 767px) {
         // custom mobile css
         
-        .title-wrapper { width: 200px; margin-left: auto; margin-right: auto;}
+        .nav-container{ margin: 0;}
+        .title-wrapper { width: 170px; margin-left: auto; margin-right: auto;}
+        .menu-wrapper { float: none; margin-left: auto; margin-right: auto;}
         .logo{ float: middle;}
         .title{ float: left;}
         .nav { float: none; width: auto;}
@@ -26,6 +28,11 @@
         .links-table{ width: 85%; margin-left: auto; margin-right: auto;}
         .links-divider{ display: none !important;}
         .links-domain{ display: none !important;}
+
+        .paginate{ margin: 0; text-align: center;}
+
+        .footer{ margin-left: 0; text-align: center;}
+        
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

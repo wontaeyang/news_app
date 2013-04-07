@@ -1,15 +1,16 @@
-<div class="six columns offset-by-five">
-<h2 class="header">Submit a Link</h2>
+<div class="six columns offset-by-two">
+<h4 class="header">Submit a Link</h4>
 
 <%= form_for(@link) do |f| %>
-	<div><%= f.label :url %><br />
-	<%= f.text_field :url, :autofocus => true %></div>
+	<%= render 'shared/error_messages' %>
+	
+	<%= f.text_field :url, :autofocus => true, placeholder: "URL - Include http://" %>
 
-	<div><%= f.label :title %><br />
-	<%= f.text_field :title %></div>
+	
+	<%= f.text_field :title, placeholder: "Title" %>
 
-	<div><%= f.label :comment %><br />
-	<%= f.text_area :title, rows: "4" %></div>
+	
+	<%= f.text_area :title, rows: "4", placeholder: "Comment" %>
 
 	<div>
 	<%= f.hidden_field :user_id, value: current_user.id %>

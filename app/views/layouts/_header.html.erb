@@ -1,25 +1,27 @@
-	<div class="nav sixteen columns">
+<div class="nav-container">
+	<div class="nav twelve columns offset-by-two">
 		<div class="title-wrapper">
 			<div class="logo pull-left"></div>
 			<%= link_to 'ARCHIVED', root_path, class: "title pull-left" %>
 		</div>
 	</div>
-	<div class="sub-nav sixteen columns">
+	<div class="sub-nav twelve columns offset-by-two">
 		<div class="menu-wrapper">
 			<ul class="menu">
 
+				<li><%= link_to 'Submit', new_link_path %></li>
+
 				<% if user_signed_in? %>
-				<li><i class="icon-minus-sign"></i><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-				<li><i class="icon-cog"></i><%= link_to 'Settings', edit_user_registration_path %></li>
+				<li><%= link_to 'Settings', edit_user_registration_path %></li>
+				<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
 				<% else %>
-				<li><i class="icon-ok-sign"></i><%= link_to 'Login', new_user_session_path %></li>
-				<li><i class="icon-edit"></i><%= link_to 'Signup', new_user_registration_path %></li>
+				<li><%= link_to 'Signup', new_user_registration_path %></li>
+				<li><%= link_to 'Login', new_user_session_path %></li>
 				<% end %>
 
-				<li><i class="icon-plus-sign"></i><%= link_to 'Submit', new_link_path %></li>
 			</ul>
 		</div>
 	</div>
-
+</div>
 
 

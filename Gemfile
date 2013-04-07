@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'skeleton-rails'
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
+gem 'faker'
 
 
 group :assets do

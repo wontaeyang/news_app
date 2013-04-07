@@ -1,9 +1,15 @@
-input, textarea, select, .uneditable-input {
+input[type="text"], input[type="password"], input[type="email"], textarea, select, .uneditable-input {
+	box-sizing:border-box;
 	border: 1px solid #bbb;
 	width: 100%;
+	padding-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 15px;
-	padding-left: 10px !important;
-	
+}
+
+input[type="submit"] {
+	width: 100%
 }
 
 input {

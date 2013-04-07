@@ -1,7 +1,8 @@
-<div class="six columns offset-by-five">
-<h2 class="header">Sign in</h2>
+<div class="six columns offset-by-two">
+<h4 class="header">Sign in</h4>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= devise_error_messages! %>
 
   <%= f.email_field :email, :autofocus => true, placeholder: "Email" %>
 
