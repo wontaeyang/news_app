@@ -26,13 +26,14 @@
 }
 
 .links-domain {
-
-	a{
-		color: #999 !important;
-	}
+		color: $archivedGray !important;
+		a{
+			color: $archivedGray !important;
+		}
 }
 
 .links-user {
+	color: $archivedGray;
 	height: 30px;
 }
 

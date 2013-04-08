@@ -17,7 +17,7 @@
 					</span>
 
 					<span class="links-domain">
-						<%= link_to URI.parse(p.url).host.gsub(/\Awww\./, "") , p.url %>
+						<%= URI.parse(p.url).host.gsub(/\Awww\./, "")  %>
 					</span>
 
 				</td>
