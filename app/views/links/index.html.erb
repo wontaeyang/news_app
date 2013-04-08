@@ -29,11 +29,11 @@
 				</td>
 				<td class="links-user">
 					<span class="">
-						<%= link_to User.find(p.user_id).name, '#' %>
+						Submitted by <%= link_to User.find(p.user_id).name, '#' %>
 					</span> 
 
 					<span class="">
-						<%= link_to "comments", p %>
+						- <%= link_to "comments", p %>
 					</span> 
 				</td>
 			</tr>
