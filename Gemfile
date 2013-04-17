@@ -6,6 +6,7 @@ gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'faker'
 gem 'jquery-rails'
+gem 'ancestry'
 
 
 group :assets do

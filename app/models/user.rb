@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
 
-  before_save {|user| user.name = name.downcase }
+  # before_save {|user| user.name = name.downcase }
   before_save {|user| user.email = email.downcase }
 
   validates :name, presence: true, uniqueness: true, length: {minimum: 3}

@@ -1,0 +1,10 @@
+<%= time_ago_in_words(comment.created_at).gsub(/^about /, "") %> ago by
+<%= link_to User.find(comment.user_id).name, '#' %>
+
+<p>
+	<%= comment.message %>
+</p>
+
+<p>
+	<%= link_to 'Reply', new_comment_path(parent_id: comment, parent_link_id: comment.link_id ) %>
+</p>

@@ -1,0 +1,17 @@
+<%= form_for(@comment) do |f| %>
+	<%= render 'shared/comment_error_messages' %>
+
+	<%= f.text_area :message, rows: "4", placeholder: "Add comment" %>
+
+	<% if @link.present? %>
+	<%= f.hidden_field :link_id, :value => @link.id %>
+	<% else %>
+	<%= f.hidden_field :link_id, value: @parent_link_id %>
+	<% end %>
+
+	<%= f.hidden_field :user_id, value: current_user.id %>
+	<%= f.hidden_field :parent_id %>
+
+
+	<div><%= f.submit "Submit", class: "button" %></div>
+<% end %>

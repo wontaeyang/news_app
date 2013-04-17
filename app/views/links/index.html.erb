@@ -8,7 +8,7 @@
 					<%= index + @offset + 1 %>.
 				</td>
 				<td>
-					<span class="links-title">
+					<span class="links-title black-link">
 						<%= link_to p.title.upcase, p.url %>
 					</span>
 
@@ -29,11 +29,14 @@
 				</td>
 				<td class="links-user">
 					<span class="">
-						Submitted by <%= link_to User.find(p.user_id).name, '#' %>
+
+						<%= time_ago_in_words(p.created_at).
+          gsub(/^about /, "") %> ago by
+						<%= link_to User.find(p.user_id).name, '#' %>
 					</span> 
 
 					<span class="">
-						- <%= link_to "comments", p %>
+						- <%= p.comments.all.count %> <%= link_to "comments", p %>
 					</span> 
 				</td>
 			</tr>
@@ -44,5 +47,5 @@
 
 
 	<div class="paginate">
-		<%= will_paginate @posts, page_links: false, next_label: "More", previous_label: ""  %>
+		<%= will_paginate @posts, page_links: false, next_label: "MORE", previous_label: ""  %>
 	</div>
