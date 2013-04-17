@@ -6,8 +6,7 @@ gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'faker'
 gem 'jquery-rails'
-gem 'ancestry'
-
+gem "ancestry", "~> 1.3.0"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
