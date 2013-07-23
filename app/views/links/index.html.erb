@@ -5,6 +5,9 @@
 
 			<tr>
 				<td class="links-numbering">
+					<%= link_to votes_path(:vote => {:link_id => p.id, :up => true}), :method => :post do%>
+						<!-- <i class="icon-plus"></i> -->
+						<% end %>
 					<%= index + @offset + 1 %>.
 				</td>
 				<td>

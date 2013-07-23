@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 	def new
 
 		@parent_link_id = (params[:parent_link_id])
-		@parent = Comment.find(@parent_link_id)
+		@parent = Comment.find(params[:parent_id])
 		@comment = Comment.new(parent_id: params[:parent_id])
 	end
 
